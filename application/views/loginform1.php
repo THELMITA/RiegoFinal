@@ -8,7 +8,7 @@
      $mensaje="Acceso no valido";
      break;
      case '3':
-     $mensaje="Gracias por usar el sistema";
+     $mensaje="Gracias  por usar el sistema";
      break;
    
    default:
@@ -44,7 +44,7 @@
 
 
                 <div  class="box">
-                    <h1>Login</h1>
+                    <h1>Lo n</h1>
 
                     <p class="text-muted" ><?php echo $mensaje; ?></p>
 
@@ -67,7 +67,7 @@
 
 
 
-                    <input type="submit" name="" value="Ingresar" href="#">
+                    <input type="submit" name="" value="x" href="#">
                     
 
 
