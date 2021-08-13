@@ -6,11 +6,6 @@
 
 
   
-  <!-- /.navbar -->
-
-  <!-- Main Sidebar Container -->
-  
-
 
 
 
