@@ -58,9 +58,7 @@
                     <div class="card-header">
                         <h4 class="card-title">Lista de Usuarios</h4>
                     </div>
-                    <div class="card-content">
-
-                        
+                    <div class="card-content">                       
                       
                         <div class="table-responsive">
                             <table class="table table-striped table-dark mb-0">
@@ -93,8 +91,6 @@ foreach ($riego->result() as $row)
       <td><?php echo $row->fin; ?></td>
     
      
-
-    
       <td>
         <?php 
          echo form_open_multipart('usuarios/modificar');
@@ -128,15 +124,7 @@ foreach ($riego->result() as $row)
 ?>
 
 
-                                    
-
-
-
-
-
-
-
-                                </tbody>
+                            </tbody>
 
 
 
