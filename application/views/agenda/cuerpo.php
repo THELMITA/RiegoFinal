@@ -4,12 +4,7 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <div class="container-fluid">
-
-
-
 <section class="section">
-
-
 
         <div class="card">
             <div class="card-header">
@@ -18,8 +13,6 @@
 
             <div class="card-body">
               <?php
-
-
   
    echo form_open_multipart('agenda/agregarbd');
 
@@ -39,8 +32,6 @@
                                
 
                         </div>
-
-
                           <div class="form-group">
 
           <label for="basicInput" class="label">Recordatorio </label>
@@ -50,8 +41,7 @@
           <input  type="text" class="form-control" name="recordatorio" >
 
 
-        </div>
-                        
+        </div>                       
 
                         
 
@@ -78,8 +68,6 @@
 
   <label class="form-check-label" for="flexRadioDefault2">  Cosecha </label>
 </div>
-
-
 </div>
 
  <div class="form-group">
