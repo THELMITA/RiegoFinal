@@ -13,11 +13,7 @@
    default:
      $mensaje="Ingrese sus datos";
      break;
- }
-
-
-
- ?>
+ } ?>
 
 
 
@@ -42,8 +38,7 @@
            <label for="user" class="label" >Usuario</label>
 
           <input id="user" type="text" name="nombreUsuario"  class="input" > 
-
-                
+               
                
         </div>
 
@@ -57,10 +52,7 @@
 
             <input type="password" name="contrasenia"   class="input" data-type="password" >
                
-                
-
-
-
+            
 
         </div>
         <div class="group">
@@ -73,8 +65,6 @@
           <input type="submit" class="button" value="Ingrese">
         </div>
              <?php 
-
-
 
 
 echo form_close();

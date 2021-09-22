@@ -42,11 +42,6 @@
 <table class="table" >
 
 
-
-
-
-
-
   <thead>
     <tr>
       <th scope="col">#</th>
@@ -57,8 +52,7 @@
       <th scope="col">TelefonoCelular</th>
       <th scope="col">TelefonoFijo</th>
       <th scope="col">Direccion</th>
-       <th scope="col">Rol</th>
-    
+       <th scope="col">Rol</th>   
 
 
 
