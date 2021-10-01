@@ -16,7 +16,7 @@
 
 
 
-  }
+  } 
 
 
   function fechaAgregar($anio,$mes,$dia,$hora)
@@ -133,8 +133,10 @@
     $f4=substr($finB,4,2);
     $fB=$f3.$f4;
 
+    
 
-   if($iH>$iB &&  $fh <$fB )
+    
+   if($fH<$iB ||  $iH >$fB )
    {
 
     $mensaje="si";
@@ -150,6 +152,23 @@
   }
 
   
+  function realizado($n)
+
+  {
+  	if ($n==1) 
+  	{
+  		
+  		$estado="Riego Realizado";
+  	}
+  	else
+  	 {
+  		$estado="No  Realizado";
+  	}
+  	return $estado;
+
+
+
+  } 
 
 
 

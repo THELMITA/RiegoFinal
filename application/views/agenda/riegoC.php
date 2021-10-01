@@ -9,10 +9,12 @@
      $mensaje="Usuario Repetido Vuelva a llenar sus datos";
      break;
      case '2':
-     $mensaje="Error inicio mayor que fin";
+     $mensaje="Hora incompatible";
      break;
      case '3':
      $mensaje="ya existe una reserva en esa hora";
+     case '4':
+      $mensaje="Ya existe un riego programado";
      break;
    
    default:
@@ -53,16 +55,17 @@
 
         <div class="card">
             <div class="card-header">
-                <h4 class="card-title">Agregar Riego</h4>
+                <h4 class="card-title">Agregar  Riego</h4>
             </div>
 
             <div class="card-body">
 
               
 
-                
 
                 
+
+                 
 
 
               <?php
@@ -159,6 +162,7 @@
   
 
   ?>
+  
     </section>
 
 
@@ -238,7 +242,7 @@
                                                 
                                                  <th scope="col">inicio</th>
                                                 <th scope="col">fin</th>
-
+                                                <th scope="col">realizo</th>
                                                 <th scope="col">Modificar</th>
                                                 <th scope="col">Eliminar</th>                                        
                                     </tr>
@@ -260,7 +264,7 @@ foreach ($riego->result() as $row)
       <td><?php echo $row->fin; ?></td>
        
      
-
+      <td><?php echo   realizado( $row->realizado); ?></td>
      
       
 
@@ -270,7 +274,7 @@ foreach ($riego->result() as $row)
     echo form_open_multipart('riego/modificar');
          ?>
          <input type="hidden" name="idagenda" value="<?php echo $_POST['idagenda']; ?>">
-        <input type="text" name="idRiego" value="<?php echo $row->idRiego; ?>">
+        <input type="hidden" name="idRiego" value="<?php echo $row->idRiego; ?>">
         <button type="submit " class="btn btn-primary mb-3">Editar</button>
         <?php 
           echo form_close();
@@ -340,6 +344,28 @@ foreach ($riego->result() as $row)
 
 
                             </table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                            
 
 
                            

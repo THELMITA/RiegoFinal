@@ -52,6 +52,53 @@ class Sensor extends CI_Controller {
      
 
 	}
+
+
+  public function reportes()
+	{
+   
+    
+    
+    
+    
+
+
+    $rol=$this->session->userdata('rol');
+
+
+    if($rol=="admin"){
+
+      $this->load->view('fondo/menuadmin.php');
+      $this->load->view('reporte/index3.php');
+     
+    }
+    else
+    {
+
+      $this->load->view('fondo/menuUser.php');
+      $this->load->view('reporte/index3.php');
+     
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+		
+      
+
+     
+
+	}
+  
   
 
      public function control()

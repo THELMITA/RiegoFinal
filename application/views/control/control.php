@@ -29,10 +29,17 @@
 
         <div class="card">
             <div class="card-header">
-                <h4 class="card-title">Control</h4>
+                <h4 class="card-title">Modificar  Riego</h4>
             </div>
 
             <div class="card-body">
+
+              
+
+                
+
+                
+
 
    
                 <div class="row">
@@ -44,7 +51,7 @@
            <?php
 
    echo form_open_multipart('sensor/prendido');
- 
+   //<?php echo $row->nombres; 
 
   ?>
 

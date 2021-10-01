@@ -3,7 +3,8 @@
         <ul class="menu">
             <li class="sidebar-title">Menu</li>
             
-            <li class="sidebar-item  ">                
+            <li class="sidebar-item  ">
+                
                    
                  <a>
 
@@ -22,6 +23,8 @@
 
 
             </li>
+
+
             <li class="sidebar-item  ">                     
                  <a>
                          
@@ -31,8 +34,6 @@
         
         <button type="submit "  class="btn btn-outline-primary" >AgregarUsuario</button>
         <?php 
-
-
           echo form_close();
 
          ?>
@@ -57,6 +58,28 @@
             </li>           
 
 
+
+
+
+
+
+
+             
+
+
+
+
+
+
+
+          
+           
+           
+           
+          
+            
+            
+          
             
         </ul>
     </div>

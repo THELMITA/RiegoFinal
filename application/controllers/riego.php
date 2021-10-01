@@ -14,7 +14,7 @@ class Riego extends CI_Controller {
         $lista=$this->riego_model->lista($idagenda);
     $data['riego']=$lista;
     
-    
+     
     
     $data['idagenda'] =$_POST['idagenda'];
      //$data['idagenda'] =$idagenda;
@@ -78,32 +78,104 @@ class Riego extends CI_Controller {
   public function agregarbd()
   {
   
-
-
+  $d=0;
+ 
      
     $data1['msg']=$this->uri->segment(3);
 
+
+    $idagenda=$_POST['idagenda'];  
          if( limiteHora($_POST['inicio'],$_POST['fin'])=="si" )
          {
-          $idagenda=$_POST['idagenda'];
-          $lista=$this->riego_model->lista($idagenda);
 
+          $consulta2=$this->riego_model->lista($idagenda);  
 
-          
+          if($consulta2->num_rows()>0)         
+          {
+            foreach ($consulta2->result() as $row)
+            {
+              
+              //$this->session->set_userdata('nombreUsuario',$row->nombreUsuario);
+             $iniL=$row->inicio;
+             $finL=$row->fin;
             
-          
+                 if(( compararH($_POST['inicio'],$_POST['fin'],$iniL,$finL))=="si" )
+                 {
+                      
+                
+                  $d=1;
+                
+                 }
+                 else{
+  
+           
+  
+                   
+                  $d=0;
+                  $data1['msg']="4";
+                 
+                 
+  
+                 }//else
+                
+           
+            }//foreac
 
 
-             $data['idagenda']=$_POST['idagenda'];
-       
-             $data['inicio']=$_POST['inicio'];
-             $data['fin']=$_POST['fin'];     
-      
-             $user=$this->session->userdata('nombreUsuario');
+
+
+
+            if( $d==1)
+            {
+              $lista=$this->riego_model->lista($idagenda);           
+              $data['idagenda']=$_POST['idagenda'];       
+              $data['inicio']=$_POST['inicio'];
+              $data['fin']=$_POST['fin'];        
+              $user=$this->session->userdata('nombreUsuario');
               $data['idUsuaioModifico']=$user;
-               $this->riego_model->AgregarRiego($data);
-   
+              $this->riego_model->AgregarRiego($data);
 
+
+            }
+            else{
+  
+           
+  
+                   
+              $d=0;
+              $data1['msg']="4";
+             
+             
+
+             }//else
+  
+
+
+
+
+          }//if rou
+          else{
+
+  
+            $lista=$this->riego_model->lista($idagenda);           
+            $data['idagenda']=$_POST['idagenda'];       
+            $data['inicio']=$_POST['inicio'];
+            $data['fin']=$_POST['fin'];        
+            $user=$this->session->userdata('nombreUsuario');
+            $data['idUsuaioModifico']=$user;
+            $this->riego_model->AgregarRiego($data);
+  
+           
+
+
+
+          }
+
+      
+
+          
+                    
+        
           
 
 
@@ -235,7 +307,7 @@ class Riego extends CI_Controller {
     
     $rol=$this->session->userdata('rol');
 
-
+ 
     
     if($rol=="admin"){
       

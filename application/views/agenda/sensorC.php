@@ -63,39 +63,41 @@
       <div class="container-fluid">
 
 
-    <section class="section">
-        <div class="row" id="table-striped-dark">
-            <div class="col-12">
-
-                <div class="card">
-                    <div class="card-header">
-                        <h4 class="card-title">Sensor</h4>
 
 
-                    </div>
 
 
-                    <div class="card-content">
+      <section class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12">
+            
+            <!-- /.card -->
 
-                        
-                      
-                        <div class="table-responsive">
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">ConReportes</h3>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body">
+                <table id="example1" class="table table-bordered table-striped">
+                  <thead>
+                  <tr>
+                  <th >#</th>
+                  <th >Modelo</th>
+                                                <th >Lectura</th>
+                                                 <th >TipoLectura</th>
+                                                 <th >fecha</th>
+                                             
+                                                <th >Eliminar</th>  
+                  </tr>
+                  </thead>
 
-                            <table class="table table-striped table-dark mb-0">
-                                <thead>
-                                    <tr>
-                                         <th scope="col">#</th>
-                                                
-                                                 <th scope="col">Modelo</th>
-                                                <th scope="col">Lectura</th>
-                                                 <th scope="col">TipoLectura</th>
 
-                                                <th scope="col">fecha</th>
-                                                <th scope="col">Eliminar</th>                                        
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <?php
+
+
+                  <tbody>
+                  <?php
 $indice=1;
 
 foreach ($sensor->result() as $row) 
@@ -111,7 +113,7 @@ foreach ($sensor->result() as $row)
       <td><?php echo $row->lectura; ?></td>
        
          <td><?php echo $row->tipoLectura; ?></td>
-             <td><?php echo $row->fechaLectura; ?></td>
+             <td><?php echo $row->fechaRegistro; ?></td>
      
       
 
@@ -139,31 +141,58 @@ foreach ($sensor->result() as $row)
 ?>
 
 
-                                    
+                  
+                  
+                  
+             
+                  
 
 
 
 
-
-
-
-                                </tbody>
-
+                  </tbody>
 
 
 
 
-
-                            </table>
-
-
-                           
-                        </div>
-                    </div>
-                </div>
+                  <tfoot>
+                  <tr>
+                  <th >#</th>
+                  <th >Modelo</th>
+                                                <th >Lectura</th>
+                                                 <th >TipoLectura</th>
+                                                 <th >fecha</th>
+                                             
+                                                <th >Eliminar</th>  
+                  </tr>
+                  </tfoot>
+                </table>
+              </div>
+              <!-- /.card-body -->
             </div>
+            <!-- /.card -->
+          </div>
+          <!-- /.col -->
         </div>
+        <!-- /.row -->
+      </div>
+      <!-- /.container-fluid -->
     </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
    
   
   
