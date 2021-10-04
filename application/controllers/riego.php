@@ -15,8 +15,7 @@ class Riego extends CI_Controller {
     $data['riego']=$lista;
 
     
-    
-     
+         
     
     $data['idagenda'] =$_POST['idagenda'];
      //$data['idagenda'] =$idagenda;
