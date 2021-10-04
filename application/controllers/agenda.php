@@ -128,12 +128,6 @@ class Agenda extends CI_Controller {
    
 
 
-
-
-    
- 
-
-
   }
 
   
