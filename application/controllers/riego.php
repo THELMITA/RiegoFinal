@@ -13,6 +13,8 @@ class Riego extends CI_Controller {
      $idagenda=$_POST['idagenda'];
         $lista=$this->riego_model->lista($idagenda);
     $data['riego']=$lista;
+
+    
     
      
     

@@ -7,19 +7,12 @@ class Agenda extends CI_Controller {
  
 	public function index()
 	{ 
-    $data['msg']=$this->uri->segment(3);
-   
+    $data['msg']=$this->uri->segment(3);  
 		
       $lista=$this->agenda_model->lista();
     $data['d']=$lista;
 
-
- 
- 
-
     $rol=$this->session->userdata('rol');
-
-
     if($rol=="admin"){
 
       $this->load->view('fondo/cabeza.php'); 
