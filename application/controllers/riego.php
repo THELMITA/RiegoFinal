@@ -21,7 +21,6 @@ class Riego extends CI_Controller {
      //$data['idagenda'] =$idagenda;
 
 
-
       $rol=$this->session->userdata('rol');
 
 
