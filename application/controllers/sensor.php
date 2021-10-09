@@ -11,8 +11,7 @@ class Sensor extends CI_Controller {
         $lista=$this->sensor_model->lista();
     $data['sensor']=$lista;
     
-    
-    
+        
     $rol=$this->session->userdata('rol');
 
 
