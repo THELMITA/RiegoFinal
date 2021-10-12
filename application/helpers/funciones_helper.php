@@ -16,7 +16,6 @@
 
   } 
 
-
   function fechaAgregar($anio,$mes,$dia,$hora)
     /*2012-06-18 19:10:56*/
 /*2021-08-21 13:29:39*/
