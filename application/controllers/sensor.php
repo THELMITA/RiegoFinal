@@ -231,7 +231,6 @@ class Sensor extends CI_Controller {
        $data['fin']=$_POST['fin'];
       
       
-
          $this->riego_model->AgregarRiego($data);
 
         
