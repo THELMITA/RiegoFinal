@@ -239,7 +239,7 @@ class Sensor extends CI_Controller {
         $lista=$this->riego_model->lista($idAgenda);
     $data['riego']=$lista;
     
-    
+        
     $rol=$this->session->userdata('rol');
 
 
