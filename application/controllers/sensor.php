@@ -239,9 +239,10 @@ class Sensor extends CI_Controller {
     $data['riego']=$lista;
     
         
+    
     $rol=$this->session->userdata('rol');
 
-    
+
 
     if($rol=="admin"){
 
