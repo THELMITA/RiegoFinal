@@ -146,8 +146,7 @@ class Agenda extends CI_Controller {
 
 
        
-       
- 
+        
           
         /*  $consulta=$this->usuario_model->validarUser($login);
       if ($consulta->num_rows()>0)
