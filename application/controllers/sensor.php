@@ -224,7 +224,6 @@ class Sensor extends CI_Controller {
   {
   
 
-
        $data['agenda_idAgenda']=$_POST['idAgenda'];
        $data['agenda_usuario_idUsuario']=$_POST['idusuario'];
        $data['inicio']=$_POST['inicio'];
