@@ -128,7 +128,6 @@ class Agenda extends CI_Controller {
    
 
   }
-
   
 
   public function agregarbd()
