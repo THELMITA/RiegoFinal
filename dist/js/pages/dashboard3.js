@@ -1,13 +1,13 @@
 /* global Chart:false */
-
-$(function () {
+$n2=200;
+$(function  () {
   'use strict'
 
   var ticksStyle = {
     fontColor: '#495057',
     fontStyle: 'bold'
   }
-
+ 
   var mode = 'index'
   var intersect = true
 
@@ -16,17 +16,17 @@ $(function () {
   var salesChart = new Chart($salesChart, {
     type: 'bar',
     data: {
-      labels: ['JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'],
+      labels: ['D', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV'],
       datasets: [
         {
           backgroundColor: '#007bff',
-          borderColor: '#007bff',
-          data: [1000, 2000, 3000, 2500, 2700, 2500, 3000]
+          borderColor: '#007bff',          
+          data: [$n2, 200, 300, 250, 270, 250, 300]
         },
         {
           backgroundColor: '#ced4da',
           borderColor: '#ced4da',
-          data: [700, 1700, 2700, 2000, 1800, 1500, 2000]
+          data: [70, 170, 270, 200, 180, 150, 200]
         }
       ]
     },
@@ -57,12 +57,12 @@ $(function () {
 
             // Include a dollar sign in the ticks
             callback: function (value) {
-              if (value >= 1000) {
-                value /= 1000
-                value += 'k'
+              if (value >= 1) {
+                value /= 1
+                value += ''
               }
 
-              return '$' + value
+              return '' + value
             }
           }, ticksStyle)
         }],
@@ -81,10 +81,10 @@ $(function () {
   // eslint-disable-next-line no-unused-vars
   var visitorsChart = new Chart($visitorsChart, {
     data: {
-      labels: ['18th', '20th', '22nd', '24th', '26th', '28th', '30th'],
+      labels: ['Enero', '20th', '22nd', '24th', '26th', '28th', '30th'],
       datasets: [{
         type: 'line',
-        data: [100, 120, 170, 167, 180, 177, 160],
+        data: [20, 12, 34, 167, 180, 177, 160],
         backgroundColor: 'transparent',
         borderColor: '#007bff',
         pointBorderColor: '#007bff',
